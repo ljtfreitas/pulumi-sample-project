@@ -1,0 +1,10 @@
+name: pulumi-sample-project
+runtime: yaml
+description: just a random pulumi yaml program for test purposes
+backend:
+  url: file://./state
+resources:
+  pet:
+    type: random:RandomPet
+outputs:
+  name: ${pet.id}
